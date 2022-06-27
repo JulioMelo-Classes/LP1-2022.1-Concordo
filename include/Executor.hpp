@@ -1,6 +1,6 @@
-#ifndef EXECUTOR_H
-#define EXECUTOR_H
-#include "Sistema.h"
+#ifndef Executor_hpp
+#define Executor_hpp
+#include "Sistema.hpp"
 #include <istream>
 #include <ostream>
 #include <sstream>
@@ -21,4 +21,4 @@ class Executor {
   string processarLinha(string linha);
 };
 
-#endif
+#endif //Executor_hpp

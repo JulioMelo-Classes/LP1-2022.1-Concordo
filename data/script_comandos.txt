@@ -1,8 +1,13 @@
+   #aqui é um comentário =0
+
+#linhas vazias também são ignoradas como essas ^
 create-user isaacfranco@imd.ufrn.br senhalegal Isaac Franco Fernandes 
 create-user isaacfranco@imd.ufrn.br senhalegal Isaac Franco Fernandes
 create-user renan@imd.ufrn.br senha Renan
 create-user julio@imd.ufrn.br senha Julio
 login isaacfranco@imd.ufrn.br senhalegal
+
+# teste de disconnect
 disconnect 0
 disconnect 1
 login isaacfranco@imd.ufrn.br SENHA_ERRADA
@@ -68,4 +73,3 @@ login isaacfranco@imd.ufrn.br senhalegal
 enter-server 0 servidor-sinistro
 list-participants 0
 quit
-create-user naodeveprocessar@imd.ufrn.br naodevechegaraqui Não deve chegar aqui

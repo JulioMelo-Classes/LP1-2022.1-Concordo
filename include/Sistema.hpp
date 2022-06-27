@@ -1,5 +1,5 @@
-#ifndef SISTEMA_H
-#define SISTEMA_H
+#ifndef Sistema_hpp
+#define Sistema_hpp
 #include <vector>
 #include <string>
 #include <iostream>
@@ -59,26 +59,6 @@ class Sistema {
 		*/
 		std::string create_server(int id, const std::string nome);
 		
-		/*! Modifica a descrição do servidor passado no comando, para a descrição desejada. A função
-			deve retornar "Descrição do servidor <nome> modificada!" ou uma mensagem de erro em caso
-			de falha.
-			@param id um id válido de um usuário logado no sistema.
-			@param nome o nome do servidor que se deseja mudar.
-			@param descricao nova descrição desejada.
-			@return "Descrição do servidor <nome> modificada!" ou uma mensagem de erro em caso de falha.
-		*/
-		std::string set_server_desc(int id, const std::string nome, const std::string descricao);
-
-		/*! Modifica o código de convite do servidor no sistema. Retorna uma mensagem de sucesso ou
-			de erro em caso de falha.
-			@param id um id válido de um usuário logado no sistema.
-			@param nome um nome válido de um servidor cadastrado no sistema.
-			@param codigo um código de acordo com o comando set-server-invite-code.
-			@return "Código de convite modificado com sucesso" ou uma mensagem de erro em caso de
-							falha.
-		*/ 
-		std::string set_server_invite_code(int id, const std::string nome, const std::string codigo);
-
 		/*! Lista os servidores cadastrados no sistema, retorna uma string contendo uma mensagem de
 			erro ou uma string vazia no caso de não haver erros.
 			@param id um id válido de algum usuário cadastrado e logado no sistema.
@@ -94,17 +74,15 @@ class Sistema {
 		*/
 		std::string remove_server(int id, const std::string nome);
 
-		/*! Faz com que o usuário logado com o id dado entre no servidor de nome com a senha fornecida
-			(se necessário). Retorna uma mensagem de erro em caso de falha ou uma mensagem de sucesso
+		/*! Faz com que o usuário logado com o id dado entre no servidor de nome fornecido. 
+			Retorna uma mensagem de erro em caso de falha ou uma mensagem de sucesso
 			caso contrário. Esse método atualiza a tabela Sistema::usuariosLogados com a informação do
 			servidor que o usuário com o id está conectado.
 			@param id  um id válido de algum usuário cadastrado e logado no sistema.
 			@param nome um nome válido de um servidor cadastrado no sistema.
-			@param codigo um código de convite para o servidor se necessário ou uma string vazia, caso
-							o comando tenha vindo sem código. Veja o comando enter-server para mais detalhes.
 			@return "Entrou no servidor <nome>" em caso de sucesso ou uma mensagem de erro caso contrário.
 		*/
-		std::string enter_server(int id, const std::string nome, const std::string codigo);
+		std::string enter_server(int id, const std::string nome);
 
 		/*! Faz com oque o usuário conectado em algum servidor saia do mesmo. Deve retornar uma string
 				com uma mensagem de sucesso ou uma mensagem de erro caso contrário. No caso que o servidor
@@ -183,4 +161,4 @@ class Sistema {
 		std::string list_messages(int id);
 };
 
-#endif
+#endif //Sistema_hpp

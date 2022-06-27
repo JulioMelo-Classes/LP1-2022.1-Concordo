@@ -1,15 +1,9 @@
-#include "Sistema.h"
+#include "Sistema.hpp"
 #include <iostream>
 #include <sstream>
 #include <algorithm>
 
 using namespace std;
-
-#include "Sistema.h"
-#include <iostream>
-#include <sstream>
-#include <algorithm>
-
 /* COMANDOS */
 string Sistema::quit() {
   return "Saindo...";
@@ -34,15 +28,6 @@ string Sistema::disconnect(int id) {
 string Sistema::create_server(int id, const string nome) {
 	return "create_server NÃO IMPLEMENTADO";
 }
-
-string Sistema::set_server_desc(int id, const string nome, const string descricao) {
-	return "set_server_desc NÃO IMPLEMENTADO";
-}
-
-string Sistema::set_server_invite_code(int id, const string nome, const string codigo) {
-	return "set_server_invite_code NÃO IMPLEMENTADO";
-}
-
 string Sistema::list_servers(int id) {
 	return "list_servers NÃO IMPLEMENTADO";
 }
@@ -51,7 +36,7 @@ string Sistema::remove_server(int id, const string nome) {
 	return "remove_server NÃO IMPLEMENTADO";
 }
 
-string Sistema::enter_server(int id, const string nome, const string codigo) {
+string Sistema::enter_server(int id, const string nome) {
 	return "enter_server NÃO IMPLEMENTADO";
 }
 
